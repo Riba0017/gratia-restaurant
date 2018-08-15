@@ -1,0 +1,23 @@
+{
+  "name": "gratia-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Riba0017/gratia-restaurant.git"
+  },
+  "author": "Riba0017",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Riba0017/gratia-restaurant/issues"
+  },
+  "homepage": "https://github.com/Riba0017/gratia-restaurant#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.5.0"
+  }
+}

@@ -3,11 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gratia</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="body-wrapper">
+    <header class="main-header">
+        <div class="main-header__nav-wrapper">
+            <span class="main-header__logo">
+                <img src="img/logo-image.png" width="119" height="34" alt="Page logo" class="main-header__logo-image">
+            </span>
+            <nav class="main-header__main-navigation main-navigation">
+                <ul class="main-navigation__list">
+                    <li class="main-navigation__item"><a href="#">About</a></li>
+                    <li class="main-navigation__item"><a href="#">Menu</a></li>
+                    <li class="main-navigation__item"><a href="#">Gallery</a></li>
+                    <li class="main-navigation__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
+        <div class="main-header__slider slider">
+            <input type="radio" id="slide_1" name="slide" checked>
+            <input type="radio" id="slide_2" name="slide">
+            <input type="radio" id="slide_3" name="slide">
+
+
+            <div class="slider__item">
+                <img src="img/slider-item.png" width="2000" height="1100" alt="first slider">
+            </div>
+            <div class="slider__item">
+                <img src="https://sd.keepcalm-o-matic.co.uk/i/look-how-they-shine-for-you.png" width="2000" height="1100" alt="second slider">
+            </div>
+            <div class="slider__item">
+                <img src="http://www.kk-carrental-tour.com/wp-content/uploads/2012/05/bgslider-2.jpg" width="2000" height="1100" alt="third slider">
+            </div>
+            <div class="selector_list">
+                <label for="slide_1">01</label>
+                <label for="slide_2">02</label>
+                <label for="slide_3">03</label>
+            </div>
+            <p class="slider__text">and perfection is not a detail</p>
+            <a href="#" class="slider__button">BOOK A TABLE</a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="perfection">
+            <div class="perfection__header-wrapper">
+                <h2 class="perfection__heading">PERFECTION</h2>
+                <p class="perfection__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="perfection__content-wrapper">
+                <div class="perfection__content-item">
+                    <h2 class="perfection__heading perfection__heading_yellow">DESSERTS</h2><hr color="#d89b64">
+                    <p class="perfection__text perfection__text_white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="perfection__content-item">
+                    <h2 class="perfection__heading">SMOOTHIES</h2><hr color="white">
+                    <p class="perfection__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="perfection__content-item">
+                    <h2 class="perfection__heading perfection__heading_yellow">BREAKFAST</h2><hr color="#d89b64">
+                    <p class="perfection__text perfection__text_white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <a href="#" class="perfection__bottom-link">CHECK OTHER OFFERS</a>
+        </section>
+
+        <section class="details wrapper">
+            <div class="details__item">
+                <h2 class="details__heading">DETAILS</h2>
+                <p class="details__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="#" class="details__button button">PREPARATION OF OUR DISHES</a>
+            </div>
+        </section>
+
+        <section class="achievement">
+            <div class="achievement__header-wrapper">
+                <h2 class="achievement__heading">HOW WE REACH THIS?</h2>
+                <p class="achievement__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="achievement__content-wrapper">
+                <div class="achievement__content-item">
+                    <h3 class="achievement__heading">DIFFERENT LOCATIONS</h3>
+                    <p class="achievement__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="achievement__content-item">
+                    <h3 class="achievement__heading">FRESH PRODUCTS</h3>
+                    <p class="achievement__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="achievement__content-item">
+                    <h3 class="achievement__heading">THE BEST FROM THE BEGINNING</h3>
+                    <p class="achievement__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+            <hr color="#f7f7f7">
+            <img src="img/footer-logo-image.png" width="143" height="143" alt="Footer logo" class="page-footer__logo-image">
+            <span class="page-footer__text">Gratia Restaurant</span>
+            <hr color="#bbbec6">
+            <div class="page-footer__socials">
+                <a href="#" class="page-footer__social">Facebook</a>
+                <a href="#" class="page-footer__social">Twitter</a>
+                <a href="#" class="page-footer__social">Instagram</a>
+            </div>
+    </footer>
+</div>
 </body>
 </html>

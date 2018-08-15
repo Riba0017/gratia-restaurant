@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Selima-Regular';
+  src: url('../fonts/Selima/Selima Regular.woff2') format('woff2'),
+       url('../fonts/Selima/Selima.woff') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson-Italic';
+    src: url('../fonts/Crimson/CrimsonText-Italic.woff2') format('woff2'),
+         url('../fonts/Crimson/CrimsonText-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

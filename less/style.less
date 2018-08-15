@@ -1,0 +1,447 @@
+
+@montserrat: 'Montserrat-Bold';
+@crimson: 'Crimson-Italic';
+@selima: 'Selima-Regular';
+@orange: #d89b64;
+@hover-button-text: #ff9332;
+@normal-button-border: #263045;
+@hover-button-border: #ffffff;
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.button {
+  text-decoration: none;
+  color: @orange;
+  border: 1px solid @normal-button-border;
+}
+
+body {
+  min-width: 1000px;
+  font: bold 16px/36px @montserrat, Arial, sans-serif;
+  color: #000000;
+}
+
+.slider__text {
+  font: italic 24px/36px @crimson, Times, serif;
+  color: #485471;
+}
+
+//header
+
+.main-header {
+  min-height: 100vh;
+  min-width: 1000px;
+  max-width: 2000px;
+  overflow: hidden;
+  background-color: #151b28;
+  &__nav-wrapper {
+    position: absolute;
+    z-index: 10;
+    margin: 0 90px;
+    padding-top: 45px;
+    width: 90%;
+    min-width: 820px;
+    max-width: 1810px;
+  }
+}
+
+.main-navigation {
+  min-width: 440px;
+  float: right;
+  &__list {
+    min-width: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    float: left;
+    padding-right: 83px;
+  }
+  &__item:last-child {
+    padding-right: 46px;
+  }
+  &__item a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  &__item a:hover {
+    color: @orange;
+  }
+}
+
+          /**SLIDER**/
+
+ .slider {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+   &__item {
+     position: relative;
+     img {
+       opacity: 0;
+       position: absolute;
+       left: 0;
+       top: 0;
+       z-index: 0;
+       height: 100vh;
+       width: 100%;
+       max-width: 2000px;
+       object-fit: cover;
+     }
+   }
+   input {
+     display: none;
+   }
+   &__text {
+     position: absolute;
+     left: 40%;
+     bottom: 60px;
+     z-index: 10;
+   }
+   &__button {
+     position: absolute;
+     right: 90px;
+     bottom: 70px;
+     z-index: 10;
+     padding: 10px 45px;
+     .button
+   }
+   &__button:hover {
+     color: @hover-button-text;
+     border-color: @hover-button-border;
+   }
+ }
+
+.selector_list {
+  position: absolute;
+  left: 90px;
+  bottom: 30px;
+  z-index: 10;
+  label {
+    cursor: pointer;
+    display: block;
+    line-height: 100px;
+    color: #ffffff;
+  }
+}
+
+#slide_1:checked ~ .selector_list label:nth-of-type(1),
+#slide_2:checked ~ .selector_list label:nth-of-type(2),
+#slide_3:checked ~ .selector_list label:nth-of-type(3) {
+  color: @orange;
+}
+
+#slide_1:checked ~ .slider__item:nth-of-type(1) > img,
+#slide_2:checked ~ .slider__item:nth-of-type(2) > img,
+#slide_3:checked ~ .slider__item:nth-of-type(3) > img {
+  opacity: 1;
+  z-index: 1;
+}
+
+     /**PAGE CONTENT**/
+
+.perfection {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 80px;
+
+  &__header-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 350px;
+    margin-bottom: 50px;
+    width: 596px;
+    background: #ffffff url(../img/Gratia-text-bg.png) center no-repeat;
+    background-size: contain;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  &__content-item:first-of-type h2,
+  &__content-item:last-of-type h2 {
+    color: @orange;
+  }
+
+  &__content-item:first-of-type hr,
+  &__content-item:last-of-type hr,
+  &__content-item:nth-of-type(2) hr {
+    width: 30px;
+  }
+
+  &__content-item:first-of-type p,
+  &__content-item:last-of-type p {
+    color: #ffffff;
+  }
+
+  &__content-item:nth-of-type(2) p {
+    padding-bottom: 50px;
+  }
+
+  &__content-item:first-of-type,
+  &__content-item:last-of-type {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-size: contain;
+    height: 490px;
+    text-align: center;
+  }
+
+  &__content-item:first-of-type {
+     background: #ffffff url(../img/perfection-dessert.jpg) center no-repeat;
+   }
+  &__content-item:nth-of-type(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    background: #ffffff url(../img/perfection-smoothies.jpg) center no-repeat;
+    background-size: auto;
+    height: 694px;
+    text-align: center;
+  }
+  &__content-item:last-of-type {
+    background: #ffffff url(../img/perfection-breakfast.jpg) center no-repeat;
+  }
+
+  &__bottom-link {
+    margin-top: 85px;
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 18px;
+    line-height: 55px;
+    color: @orange;
+    text-decoration: none;
+    border-bottom: 1px solid #d89b64;
+  }
+
+}
+
+h2 {
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 32px;
+  line-height: 52px;
+}
+
+p {
+  margin: 0 10px;
+  font-family: "Crimson-Italic", sans-serif;
+  color: #bbbec6;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (min-width: 1100px) {
+  h2 {
+    font-size: 48px;
+    line-height: 85px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .perfection {
+    &__content-item:first-of-type hr,
+    &__content-item:last-of-type hr,
+    &__content-item:nth-of-type(2) hr {
+      width: 45px;
+    }
+  }
+}
+
+         /**DETAILS SECTION**/
+
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000 url(../img/details-bg.png) center no-repeat;
+  background-size: cover;
+  height: 710px;
+
+  &__item {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 100px 150px;
+    outline: #e2e3e6 solid 1px;
+    outline-offset: -40px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    padding: 25px;
+    border-color: #e2e3e6;
+  }
+}
+
+        /**ACHIEVMENTS**/
+
+.achievement {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 80px;
+
+  &__header-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 350px;
+    width: 596px;
+    background: #ffffff url(../img/Gratia-text-bg.png) center no-repeat;
+    background-size: contain;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  &__content-item p {
+    padding: 0 30px;
+  }
+
+  &__content-item:first-of-type,
+  &__content-item:last-of-type {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-size: contain;
+    height: 490px;
+    text-align: center;
+  }
+
+  &__content-item:first-of-type {
+    background: #ffffff url(../img/achievements-first.jpg) center no-repeat;
+  }
+  &__content-item:nth-of-type(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background: #ffffff url(../img/achievements-middle.jpg) center no-repeat;
+    background-size: auto;
+    height: 590px;
+    text-align: center;
+  }
+  &__content-item:last-of-type {
+    background: #ffffff url(../img/achievements-last.jpg) center no-repeat;
+  }
+
+  &__bottom-link {
+    margin-top: 85px;
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 18px;
+    line-height: 55px;
+    color: @orange;
+    text-decoration: none;
+    border-bottom: 1px solid #d89b64;
+  }
+
+}
+
+h3 {
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 52px;
+  color: @orange;
+}
+
+@media (min-width: 1100px) {
+  h3 {
+    font-size: 24px;
+    line-height: 85px;
+  }
+}
+
+
+        /**FOOTER**/
+
+.page-footer {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+
+  hr:first-of-type {
+    width: 99.5%;
+    margin: 0;
+  }
+
+  &__logo-image {
+    position: absolute;
+    top: -17%;
+    left: 45%;
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 100px 0 80px;
+  }
+
+  hr:nth-of-type(2) {
+    width: 10%;
+  }
+
+  &__socials {
+    margin-top: 20px;
+  }
+
+  &__social {
+    position: relative;
+    display: inline-block;
+    background: url("../img/socials-sprite.png") no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 7px;
+    font-size: 0;
+  }
+
+  &__social:nth-of-type(2) {
+    background: -42px 0 url("../img/socials-sprite.png") no-repeat;
+  }
+
+  &__social:nth-of-type(3) {
+    background: -82px 0 url("../img/socials-sprite.png") no-repeat;
+  }
+
+}
+
+
+
+
+
+
+
+
+
